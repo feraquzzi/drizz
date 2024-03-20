@@ -30,24 +30,31 @@ function submitForm(e){
   var phone = getInputVal('phone');
   var message = getInputVal('message');
 
-  // Save message
-  saveMessage(fullname, email, phone, message);
+  if(email !== ' ' && phone !== ' ' && fullname !== ' ' && message !== ' '){
+    setTimeout(function(){
+        document.getElementById('modal3').style.display = 'block';
+    },1000)
+   
+    } else{
+        document.getElementById('modal3').style.display = 'none';
+  }
 
-  // Show alert
-  //alert('Sent succesfully, Drizz will get back to you shortly');
-  //document.querySelector('.alert').style.display = 'block';
+    // Save message
+    saveMessage(fullname, email, phone, message);
 
-  // Hide alert after 3 seconds
-  //setTimeout(function(){
-   // document.querySelector('.alert').style.display = 'none';
-  //},3000);
+    // Show alert
+    //alert('Sent succesfully, Drizz will get back to you shortly');
+    //document.querySelector('.alert').style.display = 'block';
 
-  // Clear form
-  document.getElementById('contact-form').reset();
-  //console.log('hello')
+    // Hide alert after 3 seconds
+    //setTimeout(function(){
+    // document.querySelector('.alert').style.display = 'none';
+    //},3000);
+
+    // Clear form
+    document.getElementById('contact-form').reset();
+    //console.log('hello')
 }
-
-
 
 
 // Function to get form value
@@ -66,5 +73,8 @@ function saveMessage(fullname, email, phone, message){
   });
 }
 
+
+
 // Listen for form submit
 document.getElementById('contact-form').addEventListener('submit', submitForm);
+

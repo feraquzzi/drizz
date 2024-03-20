@@ -156,23 +156,23 @@
 				</div>
 				<div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
 					<form action="#" id="contact-form" >
-                        <div class="col-md-12 col-sm-12 contact">
-                          	<input name="fullname" id="fullname" type="text" class="form-control" placeholder="Full Name" required>
-                        </div>
-                        <div class="col-md-6 col-sm-6 contact">
-                          	<input name="email" id="email" type="email" class="form-control" placeholder="Email" required>
-                        </div>
+            <div class="col-md-12 col-sm-12 contact">
+                <input name="fullname" id="fullname" type="text" class="form-control" placeholder="Full Name" required>
+            </div>
+            <div class="col-md-6 col-sm-6 contact">
+                <input name="email" id="email" type="email" class="form-control" placeholder="Email" required>
+            </div>
 
-                        <div class="col-md-6 col-sm-6 contact">
-                          <input name="phone" id="phone" type="number" class="form-control" placeholder="Phone Number" required>
-                        </div>
-                    
-           			  	<div class="col-md-12 col-sm-12 ">
-				   			      <textarea  name="message" id="message" class="form-control" placeholder="Message" rows="6" required></textarea>
-           			  	</div>
-                    <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
-                      <input name="submit" type="submit" class="form-control submit modalbtn3"  data-toggle="modal" data-target="#modal3"  id="modalbtn3" data-wow-delay="1s" value="SEND MESSAGE">
-                    </div>
+            <div class="col-md-6 col-sm-6 contact">
+              <input name="phone" id="phone" type="number" class="form-control" placeholder="Phone Number" required>
+            </div>
+        
+            <div class="col-md-12 col-sm-12 ">
+              <textarea  name="message" id="message" class="form-control" placeholder="Message" rows="6" required></textarea>
+            </div>
+            <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+              <input name="submit" type="submit" class="form-control submit "  id="modalbtn3"  value="SEND MESSAGE">
+            </div>
 					</form>
 				</div>
 			</div>
@@ -270,19 +270,22 @@
   </div>
 </div>
 
-<!-- contact form modal -->
-<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-      <div class="modal-content modal-popup">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h2 class="modal-title">Message Sent Successfully!</h2>
-          <div class="modal-body" style="color: whitesmoke; background-color: rgba(50,50,50, 0.5)">
-            <h3>Drizz will contact you shortly</h3>
-          </div>
-        </div>
+<!-- contact form submit  modal -->
+<div id="modal3">
+  <div class="overlaybg">
+    <div class="modalbody">
+      <div class="cancelmodal">
+        <button onclick="deleteModal()">x</button>
       </div>
+  
+      <div class="modalTitle">
+        <h3>Message sent <span style="color:#f1c11a;">Successfully</span></h3>
+        <h4>Drizz will contact you shortly!</h4>
+      </div>
+      
+    </div>
   </div>
+  
 </div>
 
 
@@ -295,6 +298,7 @@
 <script src="js/main.js"></script>
 
 <script src="firebase/login.js" defer type="module" ></script>
+<script src="firebase/passwordReset.js" defer type="module"></script>
 <script src="firebase/register.js" defer type="module"></script>
 
 
@@ -306,7 +310,9 @@
 <script src="js/smoothscroll.js"></script>
 
 <script src="js/custom.js"></script>
-
 <script src="js/contactform.js" defer type="module"></script>
+<script src="js/removeModal.js"></script>
+
+
 </body>
 </html>
