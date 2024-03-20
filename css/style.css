@@ -390,13 +390,18 @@ footer a:hover {
 
 /* modal */
 .modal-dialog .modal-content {
-  background: url('../images/modal-bg1.jpg') no-repeat;
+  background-image: url('../images/modal-bg4.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   border-radius: 0;
   text-align: center;
   padding: 100px 50px 100px 50px;
   position: relative;
+}
+
+.modal-content .overlay1{
+  background-color: red;
 }
 
 .btn:focus {
@@ -456,6 +461,11 @@ footer a:hover {
   color: #ffffff;
 }
 
+.modalbtn1{
+  background-color: #111112;
+  padding:10px;
+}
+
 .modalbtn1:link {
   text-decoration: none;
   color: whitesmoke;
@@ -468,7 +478,8 @@ footer a:hover {
 
 .modalbtn1:hover {
   text-decoration: none;
-  color: #f1c11a;
+  color: #111112;
+  background-color: whitesmoke;
 }
 
 .modalbtn1:active {
