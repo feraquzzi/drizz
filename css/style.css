@@ -356,6 +356,11 @@ footer {
   color: rgba(120,120,120,0.8) !important;
 }
 
+.alert{
+  color: teal !important;
+  /*display: none;*/
+}
+
 
 /* footer section  */
 footer {
