@@ -82,6 +82,7 @@ footer {
 }
 
 
+
 /* preloader section  */
 .preloader {
   position: fixed;
@@ -351,6 +352,10 @@ footer {
   background: #f1c11a;
 }
 
+.contact input::placeholder{
+  color: rgba(120,120,120,0.8) !important;
+}
+
 
 /* footer section  */
 footer {
@@ -478,6 +483,34 @@ footer a:hover {
 
 .forget:hover{
   color: #f1c11a;
+}
+
+form input::placeholder{
+  color: whitesmoke !important;
+}
+
+form .belong{
+  position: relative;
+}
+
+form .bi{
+  float:right;
+  cursor: pointer;
+  font-size: 30px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+@media (max-width: 700px){
+  form .bi{
+    float:right;
+    cursor: pointer;
+    font-size: 25px;
+    position: absolute;
+    right: 20px;
+    top: 13px;
+  }
 }
 
 
