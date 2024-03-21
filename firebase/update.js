@@ -20,11 +20,19 @@ const firebaseConfig = {
   function updateUserProfile(user){
     const username = user.displayName;
     const userEmail = user.email;
+    const userInitial = userEmail.substring(0, 1);
     const userProfilePicture = user.photoURL;
 
     document.getElementById('userName').textContent = username;
     document.getElementById('userEmail').textContent = userEmail;
-    document.getElementById('userProfilePicture').src = userProfilePicture;
+    if(!userProfilePicture){
+      document.querySelector('.userInitial').textContent = userInitial;
+    } else {
+      document.getElementById('userProfilePicture').src = userProfilePicture;
+      document.getElementById('userProfilePicture').style.display = 'block';
+      document.querySelector('.userInitial').style.display = 'none';
+    }
+
   }
 
  onAuthStateChanged(auth, (user) => {
