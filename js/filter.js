@@ -1,44 +1,43 @@
-const filterList = document.querySelector(".filter");
-const filterButtons = filterList.querySelectorAll(".filter-btn");
-const conferences = document.querySelectorAll(".conference");
+const beats = [
+  {
+    category: 'afrofusion',
+    name: 'wizkid',
+    age: 33
+  },
 
-let conferenceIndex = 0;
+  {
+    category: 'afrobeats',
+    name: 'Davido',
+    age: 32
+  },
 
-conferences.forEach((conference) => {
-  conference.style.viewTransitionName = `conf-${++conferenceIndex}`;
-});
+  {
+    category: 'afrofusion',
+    name: 'burnaboy',
+    age: 34
+  }
 
-filterButtons.forEach((button) => {
-  button.addEventListener("click", (e) => {
-    let confCategory = e.target.getAttribute("data-filter");
+];
 
-    if (!document.startViewTransition) {
-      updateActiveButton(e.target);
-      filterEvents(confCategory);
+const userInput = document.getElementById('filterBtn');
+const inputValue = userInput.value;
+
+const result = userInput.addEventListener('click', function(){
+  console.log(typeof(inputValue));
+  beats.map((beat) => {
+    if(inputValue === beat.category){
+      document.getElementById('result').innerHTML = 'your input matches';
+      /*return `<div key=${index}>
+        <div>
+          <h2>${beat.name}</h2>
+          <p>${beat.age}</p>
+        </div>
+        </div>`*/
+    } else{
+      document.getElementById('result').innerHTML = 'Sorry no match found';
     }
-
-    document.startViewTransition(() => {
-      updateActiveButton(e.target);
-      filterEvents(confCategory);
-    });
+    
   });
 });
 
-function updateActiveButton(newButton) {
-  filterList.querySelector(".active").classList.remove("active");
-  newButton.classList.add("active");
-}
-
-function filterEvents(filter) {
-  conferences.forEach((conference) => {
-    // get each conferences category
-    let eventCategory = conference.getAttribute("data-category");
-
-    // check if that category matches with the filter
-    if (filter === "all" || filter === eventCategory) {
-      conference.removeAttribute("hidden");
-    } else {
-      conference.setAttribute("hidden", "");
-    }
-  });
-}
+document.getElementById('result').innerHTML = result;
