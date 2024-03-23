@@ -24,14 +24,14 @@ const beats = [
     },
 
     { 
-        category: 'afrofusion',
+        category: 'afrobeat',
         name:'adri',
         age: 17,
         audioFile: 'audio.mp3',
     },
 
     { 
-        category: 'rock',
+        category: 'afrobeat',
         name:'adri',
         age: 17,
         audioFile: 'audio.mp3',
@@ -67,17 +67,22 @@ searchResult.addEventListener('click', function(){
 
    const searchResult = beats.map((beat, index) => {
         if(beat.category === searchId){
-            return `<div key=${index} class="container">
+            return `<div key=${index} class="container" >
                         
                 <div class="card">
                     <div class="box">
                         <div class="content">
-                            <h2>01</h2>
-                            <h3>${beat.name}</h3>
+                            <h2>dz</h2>
+                            <h3>${beat.category}</h3>
                             <p>${beat.desc}</p>
-                            <a href="#">Read More</a>
+                            <a href="#"><i class="bi bi-play-fill" style="font-size: 28px;"></i></a>
+                            
                         </div>
+
+                        <a class="downloadBtn" href="${beat.audioFile}" style="color: whitesmoke;" download><i style="font-size:30px;" class="bi bi-download"></i></a>
                     </div>
+
+                   
                 </div>
              
             </div>`
