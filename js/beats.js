@@ -3,6 +3,7 @@ const beats = [
         category: 'afrobeat',
         name:'adri',
         age: 17,
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         audioFile: 'audio1.mp3',
         background: './images/onebg.jpg'
     },
@@ -11,13 +12,14 @@ const beats = [
         category: 'afrobeat',
         name:'zack',
         age: 23,
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         audioFile: 'audio.mp3',
     },
 
     { 
         category: 'afrobeat',
         name:'adri',
-        age: 17,
+        age: 17,desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         audioFile: 'audio.mp3',
     },
 
@@ -39,6 +41,7 @@ const beats = [
         category: 'afrobeat',
         name:'mary',
         age: 22,
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         audioFile: 'audio.mp3',
     },
 
@@ -46,15 +49,16 @@ const beats = [
         category: 'afrobeat',
         name:'damian',
         age: 20,
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         audioFile: 'audio.mp3',
     },
     
 ];
 
-const searchResult = document.getElementById('search');
+const searchResult = document.getElementById('search-field');
 
 
-searchResult.addEventListener('input', function(){
+searchResult.addEventListener('click', function(){
     const search = document.getElementById('search');
 
    const searchValue = search.value;
@@ -63,31 +67,30 @@ searchResult.addEventListener('input', function(){
 
    const searchResult = beats.map((beat, index) => {
         if(beat.category === searchId){
-            return `<div key=${index} class="searchResult">
-                <div class="category-details">
-                    <div class="category-placeholder" style="background-image: url('${beat.background}'); background-size: cover; ">
-
-                    </div>
-
-                    <div class="beat-details">
-                        <h3>${beat.category}</h3>
-                        <h2>${beat.name}</h2>
+            return `<div key=${index} class="container">
+                        
+                <div class="card">
+                    <div class="box">
+                        <div class="content">
+                            <h2>01</h2>
+                            <h3>${beat.name}</h3>
+                            <p>${beat.desc}</p>
+                            <a href="#">Read More</a>
+                        </div>
                     </div>
                 </div>
-
-                <div class="sound">
-                    <audio src=${beat.audioFile} controls download></audio>
-                </div>
-                
+             
             </div>`
         } else {
             console.log('No result found');
+            
         }
 
    });
     
    document.getElementById('searchResult').innerHTML = searchResult.join(' ');
 })
+
      
     
 

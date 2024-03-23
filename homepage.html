@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- ===== CSS ===== -->
+    <link href="./css/special-card.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/toggle.css">
     <!--<link rel="stylesheet" href="./css/filter.css" />-->
 
-    
+    <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'>
    
-
+    <script src="https://kit.fontawesome.com/4fc7607084.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         
     <!-- ===== Boxicons CSS ===== -->
@@ -51,15 +52,15 @@
                     </div>
                     <div class="searchBox">
                         <div class="searchToggle">
-                            <i class='bx bx-x cancel'></i>
-                            <i class='bx bx-search search'></i>
+                            <!--<i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>-->
                             
                         </div>
                 
                         <div class="search-field">
                          
-                            <input id="search" type="text" class="input" placeholder="Search...">
-                            <i class='bx bx-search' onclick="searchResult()"></i>
+                            <!--<input type="text" class="input" placeholder="Search...">
+                            <i class='bx bx-search' onclick="searchResult()"></i>-->
                             
                         </div>
                     </div>
@@ -71,11 +72,59 @@
 
     </div>
 
+    <div class="filter-keys"></div>
+
     <div class="main">
         <div id="searchResult">
             
-
+            <div class="input-box">
+                <input id="search"  type="text" placeholder="Search here..." />
+                <button style="background-color: transparent;" class="button" id="search-field"><i class="fa-solid fa-magnifying-glass" style="color: #f1c11a;"></i></button>
+            </div>
         </div>
+    </div>
+
+    <div class="second">
+        <div class="second-overlay">
+            <div class="second-content">
+                <div class="content1">
+                    <p class="head-content">MY EXPERTISE IS FOR YOU</p>
+                    <div class="one">
+                        <h1>Watch the video to learn More</h1>
+                        <h1 style="color: #f1c11a;">about DRIZZ</h1>
+                    </div>
+
+                    <div class="two">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae necessitatibus, laboriosam unde, 
+                            accusamus nihil pariatur repellendus officiis aliquid rem cumque vero molestias tempore possimus 
+                            placeat odit ullam modi non in. placeat odit ullam modi non in.
+                        </p>
+                    </div>
+
+                    <div class="three">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ab aperiam dignissimos error? Suscipit, 
+                            eius? Consequuntur 
+                        </p>
+                    </div>
+
+                    <button>Read More</button>
+                </div> 
+
+                <div class="content2">
+                    <div class="video-box">
+
+                    </div>
+
+                    <div class="play">
+                        <i class="bi bi-play-circle"></i>
+                    </div>
+                </div> 
+            </div> 
+        </div>
+    </div>
+
+    <div class="footer">
+        
     </div>
 
     <script src="./firebase/update.js" defer type="module"></script>
