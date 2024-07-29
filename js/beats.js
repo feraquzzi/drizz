@@ -4,7 +4,8 @@ const beats = [
         name:'adri',
         age: 17,
         desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        audioFile: 'audio1.mp3'
+        audioFile: 'audio1.mp3',
+        price: 50000
     },
 
     { 
@@ -13,6 +14,7 @@ const beats = [
         age: 23,
         desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         audioFile: 'yk.mp3',
+        price: 50000
     },
 
     { 
@@ -20,6 +22,7 @@ const beats = [
         name:'adri',
         age: 17,desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         audioFile: 'yk.mp3',
+        price: 50000
     },
 
     { 
@@ -27,6 +30,7 @@ const beats = [
         name:'adri',
         age: 17,
         audioFile: 'yk.mp3',
+        price: 50000
     },
 
     { 
@@ -34,6 +38,7 @@ const beats = [
         name:'adri',
         age: 17,
         audioFile: 'yk.mp3',
+        price: 50000
     },
 
     { 
@@ -42,6 +47,7 @@ const beats = [
         age: 22,
         desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         audioFile: 'yk.mp3',
+        price: 50000
     },
 
     { 
@@ -50,6 +56,7 @@ const beats = [
         age: 20,
         desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         audioFile: 'yk.mp3',
+        price: 50000
     },
     
 ];
