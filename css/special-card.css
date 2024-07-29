@@ -151,7 +151,7 @@ body{
 @media only screen and (max-width: 1000px){
     #searchResult{
       float:left;
-      width:96%;
+      width:94%;
       margin-left: 2%;
       min-height: 100px;
       background: transparent;
@@ -506,6 +506,10 @@ body{
     margin-top: 5px;
     font-size: 65px;
     color: whitesmoke;
+}
+
+.bi-pause-fill{
+  display: none;
 }
 
 

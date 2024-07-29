@@ -4,8 +4,7 @@ const beats = [
         name:'adri',
         age: 17,
         desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        audioFile: 'audio1.mp3',
-        background: './images/onebg.jpg'
+        audioFile: 'audio1.mp3'
     },
 
     { 
@@ -13,44 +12,44 @@ const beats = [
         name:'zack',
         age: 23,
         desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        audioFile: 'audio.mp3',
+        audioFile: 'yk.mp3',
     },
 
     { 
-        category: 'afrobeat',
+        category: 'afrobeats',
         name:'adri',
         age: 17,desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        audioFile: 'audio.mp3',
+        audioFile: 'yk.mp3',
     },
 
     { 
-        category: 'afrobeat',
+        category: 'afrobeats',
         name:'adri',
         age: 17,
-        audioFile: 'audio.mp3',
+        audioFile: 'yk.mp3',
     },
 
     { 
-        category: 'afrobeat',
+        category: 'afrobeats',
         name:'adri',
         age: 17,
-        audioFile: 'audio.mp3',
+        audioFile: 'yk.mp3',
     },
 
     { 
-        category: 'afrobeat',
+        category: 'afrobeats',
         name:'mary',
         age: 22,
         desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        audioFile: 'audio.mp3',
+        audioFile: 'yk.mp3',
     },
 
     { 
-        category: 'afrobeat',
+        category: 'afrobeats',
         name:'damian',
         age: 20,
         desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        audioFile: 'audio.mp3',
+        audioFile: 'yk.mp3',
     },
     
 ];
@@ -67,6 +66,7 @@ searchResult.addEventListener('click', function(){
 
    const searchResult = beats.map((beat, index) => {
         if(beat.category === searchId){
+            console.log(beat.audioFile);
             return `<div key=${index} class="container" >
                         
                 <div class="card">
@@ -75,8 +75,7 @@ searchResult.addEventListener('click', function(){
                             <h2>dz</h2>
                             <h3>${beat.category}</h3>
                             <p>${beat.desc}</p>
-                            <a href="#"><i class="bi bi-play-fill" style="font-size: 28px;"></i></a>
-                            
+                            <a id="playSound" href="${beat.audioFile}" target=_blank onclick="playSound()" ><i class="bi bi-play-fill" style="font-size: 28px;"></i></a>
                         </div>
 
                         <a class="downloadBtn" href="${beat.audioFile}" style="color: whitesmoke;" download><i style="font-size:30px;" class="bi bi-download"></i></a>
@@ -96,8 +95,33 @@ searchResult.addEventListener('click', function(){
    document.getElementById('searchResult').innerHTML = searchResult.join(' ');
 })
 
-     
-    
 
 
+/*function audioPlay(){
+    let playSound = document.getElementById('playSound');
+    let audioFile = document.getElementById('audioFile');
+    if(audioFile.paused === true){
+        audioFile.play();
+        playSound.classList.toggle('bi-pause-fill');
+    } else if(audioFile.paused !== true){
 
+        audioFile.pause();
+        playSound.classList.toggle('bi-play-fill');
+    }
+};*/
+
+/*function audioPlay(){
+
+    let audioFile = document.getElementById('audioFile');
+    audioFile.play();
+};
+
+function audioPause(){
+    let audioFile = document.getElementById('audioFile');
+    audioFile.pause();
+};*/
+
+function playSound(){
+    let playSound = document.getElementById('playSound');
+    playSound.setAttribute('href', '#');
+}

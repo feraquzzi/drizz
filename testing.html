@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+
+    <ul>
+        <li></li>
+    </ul>
+
+    <script>
+        let num = 5;
+         /*if(typeof(num) === 'number'){
+            console.log('The value is a number');
+         } else {
+            console.log('The value is not a number');
+         }*/
+
+         typeof(num) === 'number' ? console.log('number') : console.log('not number');
+
+        let fruit = 'Apple';
+
+        let fruitConv = fruit.toLowerCase();
+
+        let firstChar = fruitConv.substring(0, 1);
+
+        firstChar === 'a' ? console.log('correct') : console.log('wrong');
+
+        console.log(firstChar);
+
+        fruit.length == 6 ? console.log('correct') : console.log('wrong');
+
+
+        for (let x = 0; x <= 10; x++){
+            console.log(x);
+        }
+
+
+        const cars = ['Volvo', 'Benz', 'Audi', 'Nissan'];
+
+        let text = '<ul>';
+
+        let len = cars.length;
+
+        for (let i = 0; i < len ; i++){
+            text += '<li>' + cars[i] + '</li>' + '<br>';
+        };
+
+        text += '</ul>';
+
+        document.getElementById('result').innerHTML = text;
+        
+
+    </script>
+</body>
+</html>
